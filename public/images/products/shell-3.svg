@@ -1,0 +1,7 @@
+<svg width="960" height="720" viewBox="0 0 960 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="960" height="720" fill="#EFF2F3"/>
+  <rect x="120" y="110" width="720" height="500" rx="24" fill="#D3DCE0"/>
+  <circle cx="320" cy="300" r="90" fill="#B8C4CA"/>
+  <circle cx="560" cy="420" r="110" fill="#C4CFD5"/>
+  <text x="140" y="560" font-family="Arial, Helvetica, sans-serif" font-size="18" fill="#5B676C">Structured feel</text>
+</svg>

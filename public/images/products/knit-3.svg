@@ -1,0 +1,7 @@
+<svg width="960" height="720" viewBox="0 0 960 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="960" height="720" fill="#EEF3F7"/>
+  <rect x="120" y="110" width="720" height="500" rx="24" fill="#D9E4EE"/>
+  <circle cx="320" cy="300" r="90" fill="#B7C9DB"/>
+  <circle cx="560" cy="420" r="110" fill="#C6D6E4"/>
+  <text x="140" y="560" font-family="Arial, Helvetica, sans-serif" font-size="18" fill="#5D7185">Recovery & stretch</text>
+</svg>

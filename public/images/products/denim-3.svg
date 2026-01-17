@@ -1,0 +1,7 @@
+<svg width="960" height="720" viewBox="0 0 960 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="960" height="720" fill="#EEF1F6"/>
+  <rect x="120" y="110" width="720" height="500" rx="24" fill="#C6D3E3"/>
+  <circle cx="320" cy="300" r="90" fill="#9AAECD"/>
+  <circle cx="560" cy="420" r="110" fill="#AFC0D8"/>
+  <text x="140" y="560" font-family="Arial, Helvetica, sans-serif" font-size="18" fill="#4F5E76">Responsible fibers</text>
+</svg>

@@ -1,0 +1,7 @@
+<svg width="960" height="720" viewBox="0 0 960 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="960" height="720" fill="#F6F1EC"/>
+  <rect x="120" y="110" width="720" height="500" rx="24" fill="#E3D7CC"/>
+  <circle cx="320" cy="320" r="90" fill="#CDBEAE"/>
+  <circle cx="560" cy="420" r="110" fill="#D9CABE"/>
+  <text x="140" y="560" font-family="Arial, Helvetica, sans-serif" font-size="18" fill="#786A5D">Premium blend</text>
+</svg>
