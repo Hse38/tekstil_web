@@ -1,19 +1,20 @@
 import type { Variants } from 'framer-motion';
+import { motionTokens } from '../motion/tokens';
 
 export const productGridVariants: Variants = {
   hidden: {},
   show: {
     transition: {
-      staggerChildren: 0.12
+      staggerChildren: motionTokens.stagger.base
     }
   }
 };
 
 export const productCardVariants: Variants = {
-  hidden: { opacity: 0, y: 40 },
+  hidden: { opacity: 0, y: motionTokens.distances.md },
   show: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.6, ease: [0.22, 0.61, 0.36, 1] }
+    transition: { duration: motionTokens.durations.base, ease: motionTokens.easeOut }
   }
 };

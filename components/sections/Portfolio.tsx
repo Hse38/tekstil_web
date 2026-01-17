@@ -2,12 +2,13 @@
 
 import FadeIn from '../FadeIn';
 import { useLanguage } from '../LanguageProvider';
+import SectionReveal from '../motion/SectionReveal';
 
 export default function Portfolio() {
   const { content } = useLanguage();
   return (
     <section id="portfolio" className="section-padding bg-neutral-50">
-      <div className="container-custom">
+      <SectionReveal className="container-custom">
         <FadeIn>
           <div className="max-w-3xl mb-20">
             <div className="inline-block px-4 py-2 bg-white text-sm font-medium text-neutral-700 mb-6">
@@ -27,7 +28,7 @@ export default function Portfolio() {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {content.portfolio.items.map((item, index) => (
             <FadeIn key={item.title} delay={index * 0.1}>
-              <div className="group relative overflow-hidden bg-white">
+              <div className="group relative overflow-hidden bg-white transition-transform duration-500 transform-gpu hover:-translate-y-0.5 hover:shadow-xl">
                 {/* Image Placeholder */}
                 <div className="aspect-[4/3] bg-gradient-to-br from-neutral-100 to-neutral-200 group-hover:scale-105 transition-transform duration-700"></div>
                 
@@ -46,7 +47,7 @@ export default function Portfolio() {
             </FadeIn>
           ))}
         </div>
-      </div>
+      </SectionReveal>
     </section>
   );
 }

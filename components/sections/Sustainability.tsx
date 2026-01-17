@@ -2,6 +2,7 @@
 
 import FadeIn from '../FadeIn';
 import { useLanguage } from '../LanguageProvider';
+import SectionReveal from '../motion/SectionReveal';
 
 const certifications = [
   'OEKO-TEX Standard 100',
@@ -16,7 +17,7 @@ export default function Sustainability() {
   const { content } = useLanguage();
   return (
     <section id="sustainability" className="section-padding bg-white">
-      <div className="container-custom">
+      <SectionReveal className="container-custom">
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-start">
           <FadeIn>
             <div>
@@ -59,7 +60,7 @@ export default function Sustainability() {
                   {certifications.map((cert, index) => (
                     <div 
                       key={cert}
-                      className="bg-white p-6 text-center border border-neutral-200 hover:border-neutral-300 transition-colors"
+                      className="bg-white p-6 text-center border border-neutral-200 hover:border-neutral-300 transition-colors transition-transform transform-gpu hover:-translate-y-0.5 hover:shadow-lg"
                     >
                       <div className="text-4xl mb-3">✓</div>
                       <div className="text-sm font-medium text-neutral-700">
@@ -78,7 +79,7 @@ export default function Sustainability() {
             </div>
           </FadeIn>
         </div>
-      </div>
+      </SectionReveal>
     </section>
   );
 }

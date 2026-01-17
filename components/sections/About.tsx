@@ -2,12 +2,13 @@
 
 import FadeIn from '../FadeIn';
 import { useLanguage } from '../LanguageProvider';
+import SectionReveal from '../motion/SectionReveal';
 
 export default function About() {
   const { content } = useLanguage();
   return (
     <section id="about" className="section-padding bg-white">
-      <div className="container-custom">
+      <SectionReveal className="container-custom">
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
           <FadeIn>
             <div className="space-y-6">
@@ -77,7 +78,7 @@ export default function About() {
             </div>
           </FadeIn>
         </div>
-      </div>
+      </SectionReveal>
     </section>
   );
 }

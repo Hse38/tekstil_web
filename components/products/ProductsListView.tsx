@@ -3,6 +3,7 @@
 import { useLanguage } from '@/components/LanguageProvider';
 import { products } from '@/data/products';
 import ProductCard from './ProductCard';
+import SectionReveal from '../motion/SectionReveal';
 
 export default function ProductsListView() {
   const { locale, content } = useLanguage();
@@ -10,7 +11,7 @@ export default function ProductsListView() {
   return (
     <main className="bg-white">
       <section className="section-padding">
-        <div className="container-custom">
+        <SectionReveal className="container-custom">
           <div className="max-w-3xl mb-16">
             <div className="inline-flex items-center px-4 py-2 bg-neutral-100 text-sm font-medium text-neutral-700 mb-6">
               {content.products.badge}
@@ -31,7 +32,7 @@ export default function ProductsListView() {
               />
             ))}
           </div>
-        </div>
+        </SectionReveal>
       </section>
     </main>
   );

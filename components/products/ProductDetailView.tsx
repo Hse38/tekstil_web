@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { useLanguage } from '@/components/LanguageProvider';
 import type { Product } from '@/data/products';
+import SectionReveal from '../motion/SectionReveal';
 
 type ProductDetailViewProps = {
   product: Product;
@@ -16,7 +17,7 @@ export default function ProductDetailView({ product }: ProductDetailViewProps) {
   return (
     <main className="bg-white">
       <section className="section-padding pt-28">
-        <div className="container-custom">
+        <SectionReveal className="container-custom">
           <Link
             href="/products"
             className="text-sm font-medium text-neutral-500 hover:text-neutral-900 transition-colors"
@@ -44,11 +45,11 @@ export default function ProductDetailView({ product }: ProductDetailViewProps) {
               <p className="body-base">{product.description[locale]}</p>
             </div>
           </div>
-        </div>
+        </SectionReveal>
       </section>
 
       <section className="section-padding pt-0">
-        <div className="container-custom">
+        <SectionReveal className="container-custom">
           <div className="grid lg:grid-cols-2 gap-12">
             <div className="space-y-8">
               <div>
@@ -119,7 +120,7 @@ export default function ProductDetailView({ product }: ProductDetailViewProps) {
               </div>
             </div>
           </div>
-        </div>
+        </SectionReveal>
       </section>
     </main>
   );

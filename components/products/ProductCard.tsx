@@ -4,6 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { productCardVariants } from './motion';
+import { motionTokens } from '../motion/tokens';
 
 type ProductCardProps = {
   href: string;
@@ -20,12 +21,12 @@ export default function ProductCard({ href, title, description, image, index }: 
       initial="hidden"
       whileInView="show"
       viewport={{ once: true, amount: 0.2 }}
-      transition={{ delay: index * 0.06 }}
+      transition={{ delay: index * motionTokens.cardStagger }}
       className="h-full"
     >
       <Link
         href={href}
-        className="group flex h-full flex-col border border-neutral-200 bg-white p-6 transition-shadow hover:shadow-lg cursor-pointer"
+        className="group flex h-full flex-col border border-neutral-200 bg-white p-6 transition-shadow transition-transform hover:-translate-y-0.5 hover:shadow-xl cursor-pointer"
       >
         <div className="relative mb-6 overflow-hidden rounded-md">
           <div className="relative aspect-[4/3]">

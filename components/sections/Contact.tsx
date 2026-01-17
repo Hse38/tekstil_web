@@ -3,6 +3,7 @@
 import FadeIn from '../FadeIn';
 import { useState } from 'react';
 import { useLanguage } from '../LanguageProvider';
+import SectionReveal from '../motion/SectionReveal';
 
 export default function Contact() {
   const { content } = useLanguage();
@@ -63,7 +64,7 @@ export default function Contact() {
 
   return (
     <section id="contact" className="section-padding bg-neutral-50">
-      <div className="container-custom">
+      <SectionReveal className="container-custom">
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-24">
           <FadeIn>
             <div>
@@ -201,7 +202,7 @@ export default function Contact() {
             </div>
           </FadeIn>
         </div>
-      </div>
+      </SectionReveal>
     </section>
   );
 }

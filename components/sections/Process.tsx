@@ -2,12 +2,13 @@
 
 import FadeIn from '../FadeIn';
 import { useLanguage } from '../LanguageProvider';
+import SectionReveal from '../motion/SectionReveal';
 
 export default function Process() {
   const { content } = useLanguage();
   return (
     <section id="process" className="section-padding bg-white">
-      <div className="container-custom">
+      <SectionReveal className="container-custom">
         <FadeIn>
           <div className="max-w-3xl mx-auto text-center mb-24">
             <div className="inline-block px-4 py-2 bg-neutral-100 text-sm font-medium text-neutral-700 mb-6">
@@ -64,7 +65,7 @@ export default function Process() {
             </a>
           </div>
         </FadeIn>
-      </div>
+      </SectionReveal>
     </section>
   );
 }

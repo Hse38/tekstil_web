@@ -56,10 +56,10 @@
   }
 
   .button-primary {
-    @apply inline-flex items-center justify-center px-8 py-4 text-base font-medium text-white bg-neutral-900 border border-neutral-900 transition-all duration-300 hover:bg-neutral-800 hover:shadow-lg;
+    @apply inline-flex items-center justify-center px-8 py-4 text-base font-medium text-white bg-neutral-900 border border-neutral-900 transition-all duration-300 transform-gpu hover:-translate-y-0.5 hover:bg-neutral-800 hover:shadow-xl;
   }
 
   .button-secondary {
-    @apply inline-flex items-center justify-center px-8 py-4 text-base font-medium text-neutral-900 bg-transparent border border-neutral-900 transition-all duration-300 hover:bg-neutral-900 hover:text-white;
+    @apply inline-flex items-center justify-center px-8 py-4 text-base font-medium text-neutral-900 bg-transparent border border-neutral-900 transition-all duration-300 transform-gpu hover:-translate-y-0.5 hover:bg-neutral-900 hover:text-white hover:shadow-lg;
   }
 }
