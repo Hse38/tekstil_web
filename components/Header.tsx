@@ -1,8 +1,9 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import Link from 'next/link';
 import { useLanguage } from './LanguageProvider';
+import MobileMenu from './MobileMenu';
 
 export default function Header() {
   const { locale, setLocale, content } = useLanguage();
@@ -17,6 +18,18 @@ export default function Header() {
     { href: '#portfolio', label: content.nav.portfolio },
     { href: '#sustainability', label: content.nav.sustainability }
   ];
+
+  const mobileLinks = useMemo(
+    () => [
+      { href: '/', label: content.nav.home },
+      { href: '#about', label: content.nav.about },
+      { href: '/products', label: content.nav.products },
+      { href: '#process', label: content.nav.process },
+      { href: '#sustainability', label: content.nav.sustainability },
+      { href: '#contact', label: content.nav.contact }
+    ],
+    [content]
+  );
 
   useEffect(() => {
     const handleScroll = () => {
@@ -93,58 +106,15 @@ export default function Header() {
             >
               <span className="sr-only">Open menu</span>
               <div className="space-y-1">
-                <span className={`block h-0.5 w-6 bg-current transition-transform ${isMenuOpen ? 'translate-y-1.5 rotate-45' : ''}`}></span>
-                <span className={`block h-0.5 w-6 bg-current transition-opacity ${isMenuOpen ? 'opacity-0' : ''}`}></span>
-                <span className={`block h-0.5 w-6 bg-current transition-transform ${isMenuOpen ? '-translate-y-1.5 -rotate-45' : ''}`}></span>
+                <span className="block h-0.5 w-6 bg-current opacity-80"></span>
+                <span className="block h-0.5 w-6 bg-current opacity-80"></span>
+                <span className="block h-0.5 w-6 bg-current opacity-80"></span>
               </div>
             </button>
           </div>
         </div>
       </nav>
-
-      {isMenuOpen && (
-        <div className="lg:hidden fixed inset-0 bg-white z-40">
-          <div className="container-custom px-6 md:px-12 lg:px-16 pt-24">
-            <div id="mobile-menu" className="flex flex-col gap-6">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className="text-lg font-medium text-neutral-900 hover:text-accent-stone transition-colors"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  {link.label}
-                </Link>
-              ))}
-              <Link
-                href="#contact"
-                className="button-primary mt-4"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                {content.nav.cta}
-              </Link>
-              <a
-                href="https://wa.me/905327462067"
-                className="inline-flex items-center justify-center px-4 py-3 text-sm font-semibold border border-emerald-500 text-emerald-700 hover:bg-emerald-50 transition-colors"
-                aria-label="WhatsApp"
-                target="_blank"
-                rel="noreferrer"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                WhatsApp
-              </a>
-              <button
-                type="button"
-                className="inline-flex items-center justify-center px-4 py-3 text-sm font-semibold border border-neutral-300 text-neutral-900 hover:bg-neutral-100 transition-colors"
-                onClick={() => setLocale(locale === 'tr' ? 'en' : 'tr')}
-                aria-label={content.nav.toggleLabel}
-              >
-                {locale === 'tr' ? 'EN' : 'TR'}
-              </button>
-            </div>
-          </div>
-        </div>
-      )}
+      <MobileMenu isOpen={isMenuOpen} onClose={() => setIsMenuOpen(false)} items={mobileLinks} />
     </header>
   );
 }

@@ -1,12 +1,14 @@
 export const translations = {
   en: {
     nav: {
+      home: "Home",
       about: "About",
       services: "Services",
       process: "Process",
       portfolio: "Portfolio",
       sustainability: "Sustainability",
       products: "Products",
+      contact: "Contact",
       cta: "Get in Touch",
       toggleLabel: "Switch language"
     },
@@ -248,12 +250,14 @@ export const translations = {
   },
   tr: {
     nav: {
+      home: "Ana Sayfa",
       about: "Hakkımızda",
       services: "Hizmetler",
       process: "Süreç",
       portfolio: "Portföy",
       sustainability: "Sürdürülebilirlik",
       products: "Ürünler",
+      contact: "İletişim",
       cta: "İletişime Geç",
       toggleLabel: "Dil değiştir"
     },
